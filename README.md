@@ -6,7 +6,7 @@ Ferramenta para buscar e analisar partidas do Valorant usando a API pública (He
 Jogo Valorant competitivamente e queria entender minha performance com dados reais, não só feeling.
 
 ## Stack
-- Python ou Java (a definir)
+- Python
 - Henrik Dev API (https://docs.henrikdev.xyz)
 - Pandas / visualização de dados
 
