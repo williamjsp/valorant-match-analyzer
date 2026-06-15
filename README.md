@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://media.valorant-api.com/agents/eb93336a-449b-9c1e-0ac7-dfe9992400c5/displayicon.png" width="80" alt="Valorant Agent Icon"/>
+<img src="[https://media.valorant-api.com/agents/eb93336a-449b-9c1e-0ac7-dfe9992400c5/displayicon.pn](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e83685974edceceef3fd8e0413dac95762816804-1920x1080.jpg?accountingTag=VAL&auto=format&fit=fill&q=80&w=1184)" width="80" alt="Valorant Agent Icon"/>
 
 # 🎯 valorant-match-analyzer
 
