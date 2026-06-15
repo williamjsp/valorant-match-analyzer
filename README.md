@@ -145,9 +145,9 @@ Atualmente estou em preparação para o **Campeonato FCN 2026**. O analisador é
 **William Johnson**  
 Back-end Developer | Dados & IA | Competidor de Valorant
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-williamjohnsonsz-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/williamjohnsonsz)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-williamjohnsonsz-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/williamjohnson-dev)
 [![Instagram](https://img.shields.io/badge/Instagram-@williamjohnsonsz-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/williamjohnsonsz)
-[![GitHub](https://img.shields.io/badge/GitHub-williamjohnsonsz-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/williamjohnsonsz)
+[![GitHub](https://img.shields.io/badge/GitHub-williamjohnsonsz-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/williamjsp)
 
 ---
 
