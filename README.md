@@ -14,4 +14,4 @@ Jogo Valorant competitivamente e queria entender minha performance com dados rea
 🚧 Em desenvolvimento
 
 ## Contato
-williamjohnsonsz · Maceió, AL
+Instagram: @williamjohnsonsz · Maceió, AL
