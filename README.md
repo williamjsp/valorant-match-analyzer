@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="[https://media.valorant-api.com/agents/eb93336a-449b-9c1e-0ac7-dfe9992400c5/displayicon.pn](https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/e83685974edceceef3fd8e0413dac95762816804-1920x1080.jpg?accountingTag=VAL&auto=format&fit=fill&q=80&w=1184)" width="80" alt="Valorant Agent Icon"/>
+<img src="assets/banner.png" width="100%" alt="Valorant Match Analyzer Banner"/>
 
 # 🎯 valorant-match-analyzer
 
@@ -18,7 +18,7 @@ Dados reais de partidas. Insights que o jogo não te mostra.
 
 ## 📌 Sobre o projeto
 
-Jogo Valorant competitivamente há alguns anos — já fui **2x vice-campeão em Maceió** e estou me preparando para o **Campeonato FCN patrocinado pela Riot Games**.
+Jogo Valorant competitivamente há alguns anos — já fui **2x vice-campeão em Maceió** e estou me preparando para o **Campeonato FCN**.
 
 Durante os treinos, percebi que tomava decisões baseadas em feeling, não em dados. Quais mapas eu perco mais? Em quais agentes meu K/D cai? Quando eu erro mais headshots?
 
@@ -68,7 +68,7 @@ cp .env.example .env
 # Edite o .env com seu HENRIK_API_KEY
 
 # Execute a análise
-python main.py --player "williamjohnsonsz#BR1"
+python main.py --player "NightWing#W1LL"
 ```
 
 ---
@@ -93,7 +93,7 @@ valorant-match-analyzer/
 ## 📊 Exemplo de output
 
 ```
-📋 RELATÓRIO DE PERFORMANCE — williamjohnsonsz
+📋 RELATÓRIO DE PERFORMANCE — williamjohnson
 ══════════════════════════════════════════════
 
 🏆 Últimas 20 partidas
@@ -136,7 +136,7 @@ valorant-match-analyzer/
 
 Este projeto nasce de uma necessidade real: **usar dados para melhorar performance no Valorant competitivo**.
 
-Atualmente estou em preparação para o **Campeonato FCN 2025 — patrocinado pela Riot Games**, representando Maceió, AL. O analisador é uma das ferramentas que pretendo usar durante a preparação do time.
+Atualmente estou em preparação para o **Campeonato FCN 2026**. O analisador é uma das ferramentas que pretendo usar durante a preparação do time.
 
 ---
 
