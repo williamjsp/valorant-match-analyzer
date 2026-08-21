@@ -82,14 +82,21 @@ cd valorant-match-analyzer
 
 ```
 valorant-match-analyzer/
-├── src/
-│   ├── api/          # Integração com Henrik API
-│   ├── analysis/     # Lógica de análise de dados
-│   └── reports/      # Geração de relatórios e gráficos
-├── data/             # Dados brutos e processados
-├── tests/            # Testes unitários
-├── main.py           # Ponto de entrada
-├── requirements.txt
+│
+├── app/
+│   ├── main.py
+│   ├── routers/          # Endpoints e rotas da API
+│   ├── services/         # Regras e lógica da aplicação
+│   ├── repositories/     # Acesso e persistência de dados
+│   ├── schemas/          # Schemas de entrada e saída com Pydantic
+│   ├── models/           # Modelos de persistência com SQLAlchemy
+│   └── mappers/          # Transformação entre diferentes formatos de dados
+│
+├── data/
+│   └── fixtures/         # Dados simulados de partidas para desenvolvimento
+│
+├── tests/                # Testes automatizados
+├── requirements.txt      # Dependências do projeto
 └── README.md
 ```
 
@@ -125,15 +132,63 @@ valorant-match-analyzer/
 
 ## 🗺️ Roadmap
 
-- [x] Estrutura inicial do projeto
-- [x] README e documentação base
-- [ ] Integração com Henrik API
-- [ ] Parser de dados de partidas
-- [ ] Geração de relatório no terminal
-- [ ] Dashboard visual com Plotly
-- [ ] Comparativo entre sessões de treino
-- [ ] Export para PDF / HTML
-- [ ] Suporte a múltiplos jogadores (análise de time)
+### Core da aplicação
+- [x] Definição da proposta do projeto
+- [x] Planejamento da arquitetura inicial
+- [x] Documentação base
+- [ ] Estrutura inicial com FastAPI
+- [ ] Endpoint de health check
+- [ ] Schemas de entrada e saída com Pydantic
+- [ ] CRUD de partidas
+- [ ] Camada de serviços
+- [ ] Repository pattern
+- [ ] Persistência com SQLAlchemy
+- [ ] Banco de dados SQLite
+- [ ] Tratamento de exceções
+
+### Observabilidade
+- [ ] Instrumentação da aplicação
+- [ ] Exposição de métricas
+- [ ] Integração com Prometheus
+- [ ] Métricas de requisição, erros e tempo de resposta
+- [ ] Métricas customizadas relacionadas ao processamento de partidas
+- [ ] Integração com Grafana
+- [ ] Dashboard de monitoramento da aplicação
+- [ ] Containerização dos serviços com Docker Compose
+
+### Pipeline de dados
+- [ ] Estrutura de ingestão de partidas
+- [ ] Transformação e limpeza de dados com pandas
+- [ ] Mapeamento dos dados para o modelo interno da aplicação
+- [ ] Validação e qualidade dos dados
+- [ ] Armazenamento de histórico de partidas
+- [ ] Migração da persistência para PostgreSQL
+
+### Machine Learning
+- [ ] Construção do dataset
+- [ ] Feature engineering
+- [ ] Criação de modelo baseline
+- [ ] Treinamento com scikit-learn
+- [ ] Avaliação e comparação de modelos
+- [ ] Endpoint para previsões
+- [ ] Registro de previsão versus resultado real
+- [ ] Monitoramento das métricas do modelo
+
+### Integração com VALORANT
+- [ ] Adapter para fontes externas de dados
+- [ ] Integração com a API oficial de VALORANT
+- [ ] Autorização do jogador
+- [ ] Coleta automática de partidas
+- [ ] Substituição das fixtures por dados reais
+
+### Evolução do produto
+- [ ] Análise de performance por mapa
+- [ ] Análise de performance por agente
+- [ ] Evolução de desempenho ao longo do tempo
+- [ ] Comparação entre sessões
+- [ ] Geração de insights de performance
+- [ ] Análise de múltiplos jogadores
+- [ ] Análise de equipes
 
 ---
 
