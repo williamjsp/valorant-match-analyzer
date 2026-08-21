@@ -17,11 +17,13 @@ Transformando dados de partidas em métricas, análises e insights de performanc
 
 ## 📌 Sobre o projeto
 
-Jogo Valorant competitivamente há alguns anos — já fui **2x vice-campeão em Maceió** e estou me preparando para o **Campeonato FCN**.
+Jogo Valorant competitivamente — já fui **2x vice-campeão em Maceió** e estou me preparando para o **Campeonato FCN**.
 
 Durante os treinos, percebi que tomava decisões baseadas em feeling, não em dados. Quais mapas eu perco mais? Em quais agentes meu K/D cai? Quando eu erro mais headshots?
 
-O `valorant-match-analyzer` responde essas perguntas automaticamente, buscando seus dados reais via API e gerando um relatório completo de performance.
+O `valorant-match-analyzer` está sendo desenvolvido para transformar dados de partidas em métricas e insights de performance, permitindo identificar padrões relacionados a mapas, agentes, desempenho individual e evolução ao longo do tempo.
+
+Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures`) para desenvolver e testar a arquitetura sem depender de integrações externas. A integração com a API oficial de VALORANT está planejada para uma etapa futura.
 
 > "O que não é medido, não pode ser melhorado." — aplicado ao Valorant.
 
