@@ -29,14 +29,17 @@ Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades Planejadas
 
-- 📊 **K/D ratio** por partida, agente e mapa
-- 🎯 **Headshot %** — onde você está errando a mira
-- 🗺️ **Mapas mais fortes e mais fracos** com taxa de vitória
-- 🧑‍🤝‍🧑 **Agentes mais jogados** e performance por agente
-- 📈 **Evolução de performance** ao longo do tempo
-- 🔍 **Comparativo entre sessões** de treino
+- 📊 Análise de K/D por partida, agente e mapa
+- 🎯 Análise de headshot % e eficiência em confrontos
+- 🗺️ Identificação de mapas com melhor e pior desempenho
+- 🎭 Análise de performance por agente
+- 📈 Evolução de desempenho ao longo do tempo
+- 🔍 Comparação entre sessões de treino
+- 🧠 Geração de insights a partir de padrões de performance
+- 🤖 Previsão de resultado/performance com Machine Learning
+- 📡 Monitoramento da aplicação e do processamento de dados
 
 ---
 
@@ -102,7 +105,7 @@ valorant-match-analyzer/
 
 ---
 
-## 📊 Exemplo de output
+## 📊 Visão do resultado esperado
 
 ```
 📋 RELATÓRIO DE PERFORMANCE — williamjohnson
@@ -123,9 +126,10 @@ valorant-match-analyzer/
    2. Phoenix →   5 partidas  |  K/D 1.2
    3. Breach  →   3 partidas  |  K/D 0.9
 
-⚠️  Pontos de atenção
-   - Headshot % abaixo de 30% — trabalhe mira em aim trainer
-   - Haven com K/D < 1.0 nos últimos 7 dias
+⚠️ Pontos de atenção
+   - Queda de desempenho em Haven nas últimas partidas
+   - Taxa de vitória inferior à média ao jogar de Omen
+   - Maior número de mortes nas primeiras rodadas das partidas
 ```
 
 ---
