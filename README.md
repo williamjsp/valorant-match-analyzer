@@ -25,7 +25,7 @@ O `valorant-match-analyzer` está sendo desenvolvido para transformar dados de p
 
 Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures`) para desenvolver e testar a arquitetura sem depender de integrações externas. A integração com a API oficial de VALORANT está planejada para uma etapa futura.
 
-> "O que não é medido, não pode ser melhorado." — aplicado ao Valorant.
+> "Performance sem contexto é só número." — aplicado ao Valorant.
 
 ---
 
@@ -198,16 +198,16 @@ valorant-match-analyzer/
 
 ## 🤝 Contexto competitivo
 
-Este projeto nasce de uma necessidade real: **usar dados para melhorar performance no Valorant competitivo**.
+O projeto nasce da minha experiência como jogador competitivo de VALORANT e da necessidade de transformar dados de partidas em informações mais úteis para tomada de decisão e evolução de performance.
 
-Atualmente estou em preparação para o **Campeonato FCN 2026**. O analisador é uma das ferramentas que pretendo usar durante a preparação do time.
+Já conquistei dois vice-campeonatos em competições locais em Maceió e sigo me preparando para novos campeonatos, utilizando o desenvolvimento do `valorant-match-analyzer` também como uma forma de conectar tecnologia, análise de dados e cenário competitivo.
 
 ---
 
 ## 👨‍💻 Autor
 
 **William Johnson**  
-Back-end Developer | Dados & IA | Competidor de Valorant
+Back-end Developer | Python | Dados & IA | Competidor de Valorant
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-williamjohnson--dev-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/williamjohnson-dev)
 [![Instagram](https://img.shields.io/badge/Instagram-@williamjohnsonsz-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/williamjohnsonsz)
