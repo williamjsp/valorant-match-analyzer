@@ -7,9 +7,8 @@
 **Ferramenta de análise de performance para jogadores de Valorant**  
 Dados reais de partidas. Insights que o jogo não te mostra.
 
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square)](https://github.com/williamjohnsonsz/valorant-match-analyzer)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square)](https://github.com/williamjsp/valorant-match-analyzer)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![API](https://img.shields.io/badge/Henrik%20Dev%20API-v3-FF4655?style=flat-square)](https://docs.henrikdev.xyz)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 </div>
