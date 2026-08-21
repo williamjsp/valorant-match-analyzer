@@ -40,40 +40,44 @@ Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures
 
 ---
 
-## 🛠️ Stack
+## 🛠️ Tecnologias
 
-| Tecnologia | Uso |
-|---|---|
-| Python 3.11+ | Linguagem principal |
-| [Henrik Dev API](https://docs.henrikdev.xyz) | Dados de partidas do Valorant |
-| Pandas | Manipulação e análise de dados |
-| Matplotlib / Plotly | Visualização dos resultados |
-| Requests | Consumo da API REST |
+| Tecnologia | Uso no projeto | Status |
+|---|---|---|
+| Python 3.11+ | Linguagem principal | ✅ Em uso |
+| FastAPI | Construção da API e dos endpoints da aplicação | 🚧 Em implementação |
+| Pydantic | Validação e definição dos schemas de entrada e saída | 🗺️ Planejado |
+| SQLAlchemy | ORM e camada de persistência da aplicação | 🗺️ Planejado |
+| SQLite | Banco de dados utilizado na fase inicial de desenvolvimento | 🗺️ Planejado |
+| Prometheus | Coleta e exposição de métricas da aplicação | 🗺️ Planejado |
+| Grafana | Visualização e monitoramento das métricas | 🗺️ Planejado |
+| Docker / Docker Compose | Execução e organização dos serviços da aplicação | 🗺️ Planejado |
+| pytest | Testes automatizados da aplicação | 🗺️ Planejado |
+| pandas | Processamento e transformação de dados de partidas | 🗺️ Evolução futura |
+| PostgreSQL | Banco de dados para evolução da persistência e deploy | 🗺️ Evolução futura |
+| scikit-learn | Modelos de Machine Learning e previsão de performance | 🗺️ Evolução futura |
 
 ---
 
+### 📡 Fonte de dados
+
+Atualmente, o projeto utiliza dados simulados de partidas (`fixtures`) durante o desenvolvimento.
+
+A arquitetura está sendo preparada para permitir a substituição dessa fonte de dados pela API oficial de VALORANT em uma etapa futura, sem exigir alterações significativas nas demais camadas da aplicação.
+
+---
 ## 🚀 Como rodar
 
-> ⚠️ Em desenvolvimento — instruções serão atualizadas conforme o projeto avança.
+> ⚠️ O projeto está em estágio inicial de desenvolvimento. As instruções de execução serão atualizadas conforme as primeiras funcionalidades forem implementadas.
 
 ```bash
 # Clone o repositório
-git clone https://github.com/williamjohnsonsz/valorant-match-analyzer.git
+git clone https://github.com/williamjsp/valorant-match-analyzer.git
+
+# Entre no diretório
 cd valorant-match-analyzer
-
-# Instale as dependências
-pip install -r requirements.txt
-
-# Configure sua API key
-cp .env.example .env
-# Edite o .env com seu HENRIK_API_KEY
-
-# Execute a análise
-python main.py --player "NightWing#W1LL"
 ```
-
 ---
-
 ## 📂 Estrutura do projeto
 
 ```
