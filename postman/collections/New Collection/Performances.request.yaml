@@ -1,0 +1,8 @@
+$kind: http-request
+name: Performances
+url: http://127.0.0.1:8000/performances
+method: POST
+body:
+  type: json
+  content: ""
+order: 2307406899778874
