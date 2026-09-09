@@ -4,8 +4,9 @@
 
 # 🎯 valorant-match-analyzer
 
-**Ferramenta de análise de performance para jogadores de Valorant**  
-Transformando dados de partidas em métricas, análises e insights de performance.
+**Aplicação para análise de performance em partidas competitivas**
+
+Transformando dados de partidas em métricas, análises e insights de desempenho através de uma aplicação backend estruturada com boas práticas de Engenharia de Software.
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square)](https://github.com/williamjsp/valorant-match-analyzer)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
@@ -17,29 +18,53 @@ Transformando dados de partidas em métricas, análises e insights de performanc
 
 ## 📌 Sobre o projeto
 
-Jogo Valorant competitivamente — já fui **2x vice-campeão em Maceió** e estou me preparando para o **Campeonato FCN**.
+O `valorant-match-analyzer` é uma aplicação desenvolvida para registrar, organizar e analisar dados de desempenho de jogadores em partidas competitivas.
 
-Durante os treinos, percebi que tomava decisões baseadas em feeling, não em dados. Quais mapas eu perco mais? Em quais agentes meu K/D cai? Quando eu erro mais headshots?
+O projeto tem como objetivo transformar dados de partidas em métricas e insights de performance, permitindo identificar padrões relacionados a mapas, agentes, desempenho individual e evolução ao longo do tempo.
 
-O `valorant-match-analyzer` está sendo desenvolvido para transformar dados de partidas em métricas e insights de performance, permitindo identificar padrões relacionados a mapas, agentes, desempenho individual e evolução ao longo do tempo.
-
-Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures`) para desenvolver e testar a arquitetura sem depender de integrações externas. A integração com a API oficial de VALORANT está planejada para uma etapa futura.
-
-> "Performance sem contexto é só número." — aplicado ao Valorant.
+A aplicação está sendo desenvolvida aplicando conceitos de Engenharia de Software, como arquitetura em camadas, desenvolvimento de APIs REST, persistência de dados e observabilidade.
 
 ---
+## 💡 Motivação
 
-## ✨ Funcionalidades Planejadas
+Durante minha trajetória competitiva no Valorant, percebi que muitas decisões eram tomadas com base em percepção, e não em dados.
 
-- 📊 Análise de K/D por partida, agente e mapa
-- 🎯 Análise de headshot % e eficiência em confrontos
-- 🗺️ Identificação de mapas com melhor e pior desempenho
-- 🎭 Análise de performance por agente
-- 📈 Evolução de desempenho ao longo do tempo
-- 🔍 Comparação entre sessões de treino
-- 🧠 Geração de insights a partir de padrões de performance
-- 🤖 Previsão de resultado/performance com Machine Learning
-- 📡 Monitoramento da aplicação e do processamento de dados
+Surgiram questionamentos como:
+
+- Em quais mapas tenho melhor desempenho?
+- Quais agentes apresentam melhores resultados?
+- Como minha performance evolui ao longo do tempo?
+- Quais pontos preciso melhorar?
+
+A partir dessa necessidade surgiu a ideia de desenvolver uma ferramenta capaz de transformar dados de partidas em informações úteis para análise e tomada de decisão.
+
+> "Performance sem contexto é só número."
+
+---
+## ✨ Funcionalidades
+
+### ✅ Implementadas
+
+- API REST para gerenciamento de performances;
+- Criação de registros de performance;
+- Consulta de performances;
+- Busca por identificador;
+- Atualização de performances;
+- Remoção de performances;
+- Validação de dados com Pydantic;
+- Persistência utilizando SQLAlchemy + SQLite;
+- Tratamento de exceções;
+- Controle de transações no acesso ao banco;
+- Instrumentação da aplicação com métricas utilizando Prometheus.
+- Dashboard de acompanhamento utilizando Grafana
+
+### 🚧 Planejadas
+
+- Análise de K/D por partida, agente e mapa;
+- Identificação de padrões de desempenho;
+- Comparação entre sessões de treino;
+- Geração de insights;
+- Modelos de Machine Learning.
 
 ---
 
@@ -48,12 +73,12 @@ Neste estágio inicial, o projeto utiliza dados simulados de partidas (`fixtures
 | Tecnologia | Uso no projeto | Status |
 |---|---|---|
 | Python 3.11+ | Linguagem principal | ✅ Em uso |
-| FastAPI | Construção da API e dos endpoints da aplicação | 🚧 Em implementação |
-| Pydantic | Validação e definição dos schemas de entrada e saída | 🗺️ Planejado |
-| SQLAlchemy | ORM e camada de persistência da aplicação | 🗺️ Planejado |
-| SQLite | Banco de dados utilizado na fase inicial de desenvolvimento | 🗺️ Planejado |
-| Prometheus | Coleta e exposição de métricas da aplicação | 🗺️ Planejado |
-| Grafana | Visualização e monitoramento das métricas | 🗺️ Planejado |
+| FastAPI | Construção da API e dos endpoints da aplicação | ✅ Em uso |
+| Pydantic | Validação e definição dos schemas de entrada e saída | ✅ Em uso |
+| SQLAlchemy | ORM e camada de persistência da aplicação | ✅ Em uso |
+| SQLite | Banco de dados utilizado na fase inicial de desenvolvimento | ✅ Em uso |
+| Prometheus | Coleta, armazenamento e consulta de métricas da aplicação | ✅ Em uso |
+| Grafana | Construção de dashboards para visualização das métricas | ✅ Em uso |
 | Docker / Docker Compose | Execução e organização dos serviços da aplicação | 🗺️ Planejado |
 | pytest | Testes automatizados da aplicação | 🗺️ Planejado |
 | pandas | Processamento e transformação de dados de partidas | 🗺️ Evolução futura |
@@ -71,15 +96,74 @@ A arquitetura está sendo preparada para permitir a substituição dessa fonte d
 ---
 ## 🚀 Como rodar
 
-> ⚠️ O projeto está em estágio inicial de desenvolvimento. As instruções de execução serão atualizadas conforme as primeiras funcionalidades forem implementadas.
-
 ```bash
 # Clone o repositório
 git clone https://github.com/williamjsp/valorant-match-analyzer.git
 
 # Entre no diretório
 cd valorant-match-analyzer
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Execute a aplicação
+uvicorn app.main:app --reload
+
+# Documentação Swagger:
+http://localhost:8000/docs
+
+# Métricas Prometheus:
+http://localhost:8000/metrics
 ```
+---
+## 🏗️ Arquitetura
+
+A aplicação segue uma arquitetura organizada em camadas, buscando separar responsabilidades e facilitar a evolução do sistema.
+
+Fluxo da aplicação:
+
+```text
+Cliente
+  |
+  | Requisição HTTP
+  ↓
+Router
+  |
+  | Encaminha a operação
+  ↓
+Service
+  |
+  | Aplica regras de negócio
+  ↓
+Repository
+  |
+  | Acesso aos dados
+  ↓
+Database
+```
+
+### Camadas
+
+**Router**
+- Responsável pelos endpoints HTTP;
+- Recebe requisições e retorna respostas.
+
+**Service**
+- Contém regras de negócio;
+- Coordena o fluxo da aplicação.
+
+**Repository**
+- Responsável pela comunicação com o banco de dados.
+
+**Schemas**
+- Validação dos dados utilizando Pydantic.
+
+**Models**
+- Representação das entidades persistidas utilizando SQLAlchemy.
+
+**Mappers**
+- Conversão entre diferentes formatos de dados.
+
 ---
 ## 📂 Estrutura do projeto
 
@@ -139,25 +223,25 @@ valorant-match-analyzer/
 ### Core da aplicação
 - [x] Definição da proposta do projeto
 - [x] Planejamento da arquitetura inicial
-- [x] Documentação base
-- [ ] Estrutura inicial com FastAPI
-- [ ] Endpoint de health check
-- [ ] Schemas de entrada e saída com Pydantic
-- [ ] CRUD de partidas
-- [ ] Camada de serviços
-- [ ] Repository pattern
-- [ ] Persistência com SQLAlchemy
-- [ ] Banco de dados SQLite
-- [ ] Tratamento de exceções
+- [x] Estrutura inicial com FastAPI
+- [x] Endpoint de health check
+- [x] Schemas de entrada e saída com Pydantic
+- [x] CRUD de performances
+- [x] Camada de serviços
+- [x] Repository pattern
+- [x] Persistência com SQLAlchemy
+- [x] Banco de dados SQLite
+- [x] Tratamento de exceções
+- [x] Controle de transações 
 
 ### Observabilidade
-- [ ] Instrumentação da aplicação
-- [ ] Exposição de métricas
-- [ ] Integração com Prometheus
-- [ ] Métricas de requisição, erros e tempo de resposta
-- [ ] Métricas customizadas relacionadas ao processamento de partidas
-- [ ] Integração com Grafana
-- [ ] Dashboard de monitoramento da aplicação
+- [x] Instrumentação da aplicação
+- [x] Exposição de métricas
+- [x] Integração com Prometheus
+- [x] Métricas de requisição, erros e tempo de resposta
+- [x] Métrica customizada de performances criadas
+- [x] Integração com Grafana
+- [x] Dashboard de monitoramento da aplicação
 - [ ] Containerização dos serviços com Docker Compose
 
 ### Pipeline de dados
