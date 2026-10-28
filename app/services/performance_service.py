@@ -18,6 +18,8 @@ from app.schemas.performance import(
 
 from app.mappers.performance_mapper import to_model
 
+from app.observability.elk_logger import send_event
+
 def register_performance(
     db: Session,
     performance_data: PlayerPerformanceCreate,
@@ -27,6 +29,13 @@ def register_performance(
     created_performance = create_performance(db, performance)
 
     performances_creations_total.inc()
+
+    send_event(
+        event="performance_created",
+        performance_id=created_performance.id,
+        request_method="POST",
+        endpoint=f"/performances"
+        )
 
     return created_performance
 
@@ -66,7 +75,16 @@ def edit_performance(
     performance.assists = performance_data.assists
     performance.result = performance_data.result   
 
-    return update_performance(db, performance)
+    updated_performance = update_performance(db, performance)
+
+    send_event(
+        event="performance_updated",
+        performance_id=updated_performance.id,
+        request_method="PUT",
+        endpoint=f"/performances/{updated_performance.id}"
+    )
+
+    return updated_performance
 
 def remove_performance(
     db: Session,
@@ -81,3 +99,10 @@ def remove_performance(
         )
 
     delete_performance(db, performance)
+
+    send_event(
+        event="performance_deleted",
+        performance_id=performance.id,
+        request_method="DELETE",
+        endpoint=f"/performances/{performance.id}"
+    )
